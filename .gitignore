@@ -1,3 +1,7 @@
+.vscode/
+# burde .vscode ikke have en / efter sig?
+
+
 # build output
 dist/
 
