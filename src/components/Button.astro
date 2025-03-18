@@ -5,7 +5,7 @@ const Link = Astro.props.Link;
 ---
 
 <button class={Type}
-  ><a href={Link}>{Text}</a><div class="arrowR"></div>
+  ><a href={Link}>{Text}</a>
 
   <style>
     button {
@@ -14,18 +14,36 @@ const Link = Astro.props.Link;
       border-radius: 30px;
       color: white;
       text-transform: uppercase;
-      width: 324.261px;
       height: 52.536px;
       flex-shrink: 0;
+      color: #00d29e;
+      text-align: center;
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      margin: 20px 0px;
+      width: 100%;
+    }
+    button a {
+      color: #00d29e;
+      text-decoration: none;
+      font-family: sans-serif;
     }
     .Hero {
       background-color: #00d29e;
       border: none;
+      color: #000d1b;
+      text-align: center;
+      font-family: "Open Sans";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
     }
-    .arrowR {
-      background-image: url(../../public/arrowR.svg);
-      background-repeat: no-repeat;
-      height: 20px;
+    .Hero a {
+      color: white;
     }
   </style>
 </button>

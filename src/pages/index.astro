@@ -15,7 +15,7 @@ import Button from "../components/Button.astro";
       <h1>27/7</h1>
       <p>Tikøb</p>
     </div>
-    <Button Text="Se program" Type="Hero" />
+    <Button Text="Se program" Type="Hero" Link="program.html" />
     <div class="arrow">
       <a href="#Kulturnat2025">
         <img src="../../public/arrowDown.svg" alt="" />
@@ -23,27 +23,30 @@ import Button from "../components/Button.astro";
     </div>
   </div>
   <div class="wave" id="Kulturnat2025"></div>
-  <h2>Kulturnat 2025</h2>
-  <p>
-    Kulturnætterne i Helsingør Kommune er det årlige lyspunkt i det begyndende
-    efterårs mørke aftener. Det lokale kultur-, forenings- og handelsliv
-    opfordrer i samarbejde borgerne om at komme ud af stuerne for sammen at
-    fylde byrummene i Tikøb, Espergærde og Helsingør med liv.
-  </p>
-  <Button Text="Se mere" Link="" />
+  <div class="infoBoxes">
+    <h2>Kulturnat 2025</h2>
+    <p>
+      Kulturnætterne i Helsingør Kommune er det årlige lyspunkt i det begyndende
+      efterårs mørke aftener. Det lokale kultur-, forenings- og handelsliv
+      opfordrer i samarbejde borgerne om at komme ud af stuerne for sammen at
+      fylde byrummene i Tikøb, Espergærde og Helsingør med liv.
+    </p>
+    <Button Text="Se mere" Link="program.html" />
+  </div>
   <!-- carrusel -->
   <img src="../../public/heroPlaceholder.jpg" alt="" />
-
-  <h2>Vil du afholde en begivenhed?</h2>
-  <p>
-    Alle kan deltage med arrangementer og aktiviteter på Kulturnatten. Store som
-    små organisationer, institutioner og enkeltpersoner skaber på Kulturnatten
-    sammen liv i hele byen. Hvis du har lyst til at deltage med et arrangement
-    på Kulturnatten, kan du få det med i det fælles program. Som arrangører har
-    I selv det fulde ansvar for begivenheden, herunder sikkerhed og indhentning
-    af eventuelle nødvendige tilladelser.
-  </p>
-  <Button Text="Bliv arrangør" />
+  <div class="infoBoxes">
+    <h2>Vil du afholde en begivenhed?</h2>
+    <p>
+      Alle kan deltage med arrangementer og aktiviteter på Kulturnatten. Store
+      som små organisationer, institutioner og enkeltpersoner skaber på
+      Kulturnatten sammen liv i hele byen. Hvis du har lyst til at deltage med
+      et arrangement på Kulturnatten, kan du få det med i det fælles program.
+      Som arrangører har I selv det fulde ansvar for begivenheden, herunder
+      sikkerhed og indhentning af eventuelle nødvendige tilladelser.
+    </p>
+    <Button Text="Bliv arrangør" />
+  </div>
 </Layout>
 <!-- style -->
 <style>
@@ -61,6 +64,7 @@ import Button from "../components/Button.astro";
   .arrow {
     width: 34.5px;
     height: 55px;
+    margin: auto;
   }
 
   h1 {
@@ -78,5 +82,8 @@ import Button from "../components/Button.astro";
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+  }
+  .infoBoxes {
+    margin: 30px;
   }
 </style>
