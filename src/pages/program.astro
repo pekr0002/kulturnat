@@ -1,8 +1,129 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout> iuefiu </Layout>
+<Layout>
+  <h1>Program</h1>
+  <form action="/action_page.php">
+    <select name="location" id="location">     
+      <option value="helsingør">Helsingør</option>
+      <option value="espergærde">Espergærde</option>
+      <option value="tikøb">Tikøb</option>
+    </select>
+    <select name="age" id="age">
+      <option value="børn">Børn</option>
+      <option value="unge">Unge</option>
+      <option value="voksne">Voksne</option>
+      <option value="ældre">Ældre</option>
+    </select>
+    <select name="category" id="category">
+      <option value="teater">Teater</option>
+      <option value="musik">Musik</option>
+      <option value="kultur">Kultur</option>
+      <!-- load API for the rest of categories -->
+    </select>
+    <select name="type" id="type">
+      <option value="komedie">Komedie</option>
+      <option value="klassisk">Klassisk</option>
+      <!-- load API for the rest of types -->
+    </select>
+
+    <select name="sorting" id="sorting">
+      <option value="tidligst">Tidligst &#8594; Senest</option>
+      <option value="senest">Senest &#8594; Tidligst</option>
+      <!-- load API for the rest of types -->
+    </select>
+    <div class="select">
+      <label for="free">Vis kun gratis:</label>
+      <input id="free" type="checkbox" />
+    </div>
+  </form>
+  <div class="wave"></div>
+  <div class="program">
+    <Card
+      Img="../../public/heroPlaceholder.png"
+      Place="Havnepladsen 1"
+      Header="BGK artlab udstilling"
+      Time="Kl. 17:00"
+      Description="BGK artlab er en ny 3 årig forberende uddannelse for unge mellem 15-25 år, som ønsker at forberede sig til optagelse på de professionelle kunsteriske og..."
+    />
+    <Card
+      Img="../../public/heroPlaceholder.png"
+      Place="Allegade 2"
+      Header="Rundvisning:“bag kulissen”"
+      Time="Kl.18:00"
+      Description="Helsingør kommunes biblioteker udlåner årligt omkring 450.000 materialer. biblotekchef Søren Mørk Petersen giver en forsmag på, hvordan en almindelig hverdag på kulturværftet..."
+    />
+    <Card
+      Img="../../public/heroPlaceholder.png"
+      Place="Helsingør bycenter"
+      Header="TRYL EN GAMMEL T-SHIRT OM TIL ET INDKØBSNET"
+      Time="Kl. 18:00"
+      Description="vil du se hvordan man tryller en gammel t-shirt om til et smart indkøbsnet? så kom og vær med når Line Hvid fra kreativ med Ungerne kommer og viser, hvordan du nemt kan få et cool net..."
+    />
+    <Card
+      Img="../../public/heroPlaceholder.png"
+      Place="Kronborg slot"
+      Header="Kronborg i mørket"
+      Time="Kl. 17:00"
+      Description="I aften får du og familien en helt unik mulighed for at opleve kronborg i mørket mellem 18:00-21:00...."
+    />
+    <Card
+    Img="../../public/heroPlaceholder.png"
+    Place="Ny kronborgvej 14"
+    Header="Kulturnat i historisk havn"
+    Time="Kl. 18:00"
+    Description="I skibsværftets hal 16 kan du se smukke klassiske træfartøjer, oplyst med projektører. hør om bådens historie, og arbejdet med at renovere dem..."
+  />
+  <Card
+  Img="../../public/heroPlaceholder.png"
+  Place="Havnepladsen 1"
+  Header="Fællesspisning og disco"
+  Time="Kl.18:00"
+  Description="Hvor tit har du ikke siddet og tænkt, hvor filan blev festen af... det er fredag, og her sidder vi igen? Toldkammeret er tilbage igen med det fuldstændigt uregerlige ‘Dine and Dance’..."
+/>
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    color: #e8f3ff;
+    font-family: "Bebas Neue";
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .program {
+    margin: 20px;
+    display: grid;
+display: grid;
+grid-rows:40px;
+gap: 40px;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  select,
+  .select {
+    width: 100%;
+    height: 47px;
+    border-radius: 25px;
+    border: 3px solid var(--Color-cyan-100, #00d29e);
+    background: #05101c;
+    text-transform:capitalize
+    flex-shrink: 0;
+    color: #00d29e;
+    text-align: center;
+    font-family: font-family: "Noto Sans Lao";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 10px 0px;
+    width: 100%;
+  }
+  form {
+    margin: 10px 0px 40px 0;
+  }
+</style>

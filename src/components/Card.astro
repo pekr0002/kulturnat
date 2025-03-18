@@ -1,0 +1,39 @@
+---
+import Button from "./Button.astro";
+const Header = Astro.props.Header;
+const Place = Astro.props.Place;
+const Time = Astro.props.Time;
+const Img = Astro.props.Img;
+const Description = Astro.props.Description;
+const Link = Astro.props.Link;
+---
+
+<div class="card">
+  <img src={Img} alt="" />
+  <h3>{Place}</h3>
+  <h2>{Header}</h2>
+  <h3>{Time}</h3>
+  <div class="wave"></div>
+  <p>
+    {Description}
+  </p>
+  <Button Text="Læs mere her" />
+</div>
+<style>
+  .card {
+    width: 326px;
+    padding: 26px 29px;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+    border-radius: 28px;
+    background: #161626;
+    margin: auto;
+  }
+  img {
+    margin: 0 0 20px 0;
+  }
+  .wave {
+    margin: 5px 0;
+  }
+</style>
