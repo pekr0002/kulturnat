@@ -14,7 +14,20 @@ img {
 
 html {
   --backgroundColor: #05101c;
+  scroll-behavior: smooth;
 }
 body {
   background-color: var(--backgroundColor);
+  font-family: sans-serif;
+  color: white;
+}
+
+.wave {
+  background-image: url(../../public/wave.svg);
+  height: 20px;
+}
+
+h2 {
+  color: #70fdda;
+  margin: 20px 0;
 }

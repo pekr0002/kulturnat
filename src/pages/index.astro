@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -7,6 +8,82 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <div class="hero">
-    <h1>iir+</h1>
+    <div class="information">
+      <h1>20/7</h1>
+      <p>Helsingør</p>
+      <p>Espergærde</p>
+      <h1>27/7</h1>
+      <p>Tikøb</p>
+    </div>
+    <Button Text="Se program" Type="Hero" Link="program.html" />
+    <div class="arrow">
+      <a href="#Kulturnat2025">
+        <img src="../../public/arrowDown.svg" alt="" />
+      </a>
+    </div>
+  </div>
+  <div class="wave" id="Kulturnat2025"></div>
+  <div class="infoBoxes">
+    <h2>Kulturnat 2025</h2>
+    <p>
+      Kulturnætterne i Helsingør Kommune er det årlige lyspunkt i det begyndende
+      efterårs mørke aftener. Det lokale kultur-, forenings- og handelsliv
+      opfordrer i samarbejde borgerne om at komme ud af stuerne for sammen at
+      fylde byrummene i Tikøb, Espergærde og Helsingør med liv.
+    </p>
+    <Button Text="Se mere" Link="program.html" />
+  </div>
+  <!-- carrusel -->
+  <img src="../../public/heroPlaceholder.jpg" alt="" />
+  <div class="infoBoxes">
+    <h2>Vil du afholde en begivenhed?</h2>
+    <p>
+      Alle kan deltage med arrangementer og aktiviteter på Kulturnatten. Store
+      som små organisationer, institutioner og enkeltpersoner skaber på
+      Kulturnatten sammen liv i hele byen. Hvis du har lyst til at deltage med
+      et arrangement på Kulturnatten, kan du få det med i det fælles program.
+      Som arrangører har I selv det fulde ansvar for begivenheden, herunder
+      sikkerhed og indhentning af eventuelle nødvendige tilladelser.
+    </p>
+    <Button Text="Bliv arrangør" />
   </div>
 </Layout>
+<!-- style -->
+<style>
+  .hero {
+    background-image: url(../../public/heroPlaceholder.png);
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    color: white;
+  }
+  .information {
+    border-radius: 30px;
+    border: 5px solid var(--Color-cyan-100, #00d29e);
+  }
+  .arrow {
+    width: 34.5px;
+    height: 55px;
+    margin: auto;
+  }
+
+  h1 {
+    color: #e8f3ff;
+    font-family: "Bebas Neue";
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .hero p {
+    color: #70fdda;
+    font-family: "Open Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .infoBoxes {
+    margin: 30px;
+  }
+</style>
