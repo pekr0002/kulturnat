@@ -1,0 +1,31 @@
+---
+const Text = Astro.props.Text;
+const Type = Astro.props.Type;
+const Link = Astro.props.Link;
+---
+
+<button class={Type}
+  ><a href={Link}>{Text}</a><div class="arrowR"></div>
+
+  <style>
+    button {
+      background-color: var(--backgroundColor);
+      border-color: #00d29e;
+      border-radius: 30px;
+      color: white;
+      text-transform: uppercase;
+      width: 324.261px;
+      height: 52.536px;
+      flex-shrink: 0;
+    }
+    .Hero {
+      background-color: #00d29e;
+      border: none;
+    }
+    .arrowR {
+      background-image: url(../../public/arrowR.svg);
+      background-repeat: no-repeat;
+      height: 20px;
+    }
+  </style>
+</button>

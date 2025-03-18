@@ -18,3 +18,15 @@ html {
 body {
   background-color: var(--backgroundColor);
 }
+
+.wave {
+  background-image: url(../../public/wave.svg);
+  height: 20px;
+}
+
+p {
+  color: white;
+}
+h2 {
+  color: #70fdda;
+}
